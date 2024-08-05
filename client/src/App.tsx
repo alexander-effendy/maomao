@@ -1,4 +1,6 @@
-import {KindeProvider} from "@kinde-oss/kinde-auth-react";
+import { BrowserRouter } from 'react-router-dom';
+
+import { KindeProvider } from "@kinde-oss/kinde-auth-react";
 import Pages from '@/Pages';
 
 const App = () => (
@@ -8,7 +10,8 @@ const App = () => (
 		redirectUri="http://localhost:5173"
 		logoutUri="http://localhost:5173"
 	>
-		<Pages />
+    <BrowserRouter><Pages /></BrowserRouter>
+		
 	</KindeProvider>
 );
 

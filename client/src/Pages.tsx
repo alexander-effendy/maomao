@@ -1,12 +1,14 @@
-import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import Auth from './screens/Auth';
+import Home from './screens/Home';
 
 const Pages = () => {
   return (
-    <BrowserRouter>
-      <Auth />
-    </BrowserRouter>
+    <div className="h-full">
+      <Routes>
+				<Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 };
 
