@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
 
 import {
@@ -18,7 +18,7 @@ export default function HeroFormCenterAlignedSearchWithTags() {
   const handleLogin = () => login();
 
   return (
-    <MaxWidthWrapper className="h-screen">
+    <MaxWidthWrapper className="flex items-center justify-center h-screen">
       {/* Hero */}
       <div className="relative overflow-hidden border-[1px] w-full bg-white">
         <div className="container py-24 lg:py-32">
