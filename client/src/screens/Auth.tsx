@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper";
+import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
+
 import {
   BriefcaseIcon,
   FlowerIcon,
@@ -10,6 +12,11 @@ import {
 } from "lucide-react";
 
 export default function HeroFormCenterAlignedSearchWithTags() {
+
+  const { login } = useKindeAuth();
+
+  const handleLogin = () => login();
+
   return (
     <MaxWidthWrapper className="h-screen">
       {/* Hero */}
@@ -26,7 +33,11 @@ export default function HeroFormCenterAlignedSearchWithTags() {
               {/* Form */}
               <form>
                 <div className="relative z-10 flex space-x-3 p-3 border bg-background rounded-lg shadow-lg">
-                  <Button variant={"outline"} className="rounded-[8px] w-full hover:bg-[#ebebeb]">
+                  <Button 
+                    variant={"outline"} 
+                    className="rounded-[8px] w-full hover:bg-[#ebebeb]"
+                    onClick={handleLogin}
+                  >
                     <svg
                       className="w-4 h-auto mr-2"
                       width={46}
